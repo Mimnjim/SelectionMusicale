@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Music - Sélections musicales</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+<body>
+    
+    <header id="scroll-top">
+        <div class="pochette-vinyl">
+            <h1 class="title-pochette">Echo music</h1>
+        </div>
+        <div class="vinyl">
+            <div class="second-layer">
+                <div class="line-middle-vinyl-1"></div>
+                <div class="line-middle-vinyl-2"></div>
+                <div class="border-middle-vinyl"></div>
+            </div>
+            <div class="middle-vinyl">
+            </div>
+        </div>
+        
+        <h1 class="title-page">Echo Music</h1>
+        <h2>Découvrez les choix musicaux avec leurs avis, et ajoutez également les vôtres !</h3>
+        <button class="add-content" onclick="PopUp()">+</button>
+        <div class="pop-up">
+            <div class="close-pop-up">
+                <button onclick="PopUp()">X</button>
+            </div>
+            <div class="apercu">
+                
+            </div>
+            <form action="">
+                <h1>A vous de mettre votre avis sur une musique que vous aimez/détestez !</h1>
+                
+                <div class="add-infos">
+                    <div class="mail">
+                        <label for="mail">Votre mail<span class="required">*</span></label>
+                        <input type="email" name="mail" id="mail" placeholder="Entrer votre mail">
+                        <span class="error-mail"></span>
+                        <span class="validate-mail"></span>
+                    </div>
+                    <div class="titre">
+                        <label for="titre">Votre titre de la musique (10 caractères maximum)<span class="required">*</span></label> 
+                        <input type="text" name="titre" id="titre" required placeholder="Titre de votre musique" size="10">
+                        <span class="error-title"></span>
+                        <span class="validate-title"></span>
+                    </div>
+                    <div class="artiste">
+                        <label for="artiste">Nom de l'artiste (20 caractères maximum)<span class="required">*</span></label>
+                        <input type="text" name="titre" id="artiste" required placeholder="Nom de votre artiste" size="20">
+                        <span class="error-artist"></span>
+                        <span class="validate-artist"></span>
+                    </div>
+                    <div class="explication">
+                        <label for="explication">Description de la musique (150 caractères maximum)<span class="required">*</span></label>
+                        <textarea name="explication" id="explication" cols="50" rows="10" required placeholder="Description de votre musique" aria-setsize="150"></textarea>
+                        <span class="error-explication"></span>
+                        <span class="validate-explication"></span>
+                    </div>
+                    <div class="image">
+                        <label for="image">Votre image <span class="required">*</span></label>
+                        <input type="file" name="image" id="image" accept="image/*" required>
+                        <span class="error-img"></span>
+                        <span class="validate-img"></span>
+                    </div>
+                    <div class="audio">
+                        <label for="audio">Ajoutez un extrait audio (15 secondes maximum) <span class="required">*</span></label>
+                        <input type="url" name="audio" id="audio" required placeholder="Ajouter une URL de votre musique du type : https://{url}/{votremusique}.mp3 (fichier audio avec l'extension mp3, etc...)">
+                        <span class="error-audio"></span>
+                        <span class="validate-audio"></span>
+
+                    </div>
+                    <div class="link">
+                        <label for="link">Lien d'une plateforme sur laquelle écouter la musique/album <span class="required">*</span></label>
+                        <input type="url" name="link" id="link" required placeholder="Ajouter un lien Spotify, SoundCloud ou YouTube">
+                        <span class="error-link"></span>
+                        <span class="validate-link"></span>
+                    </div>
+
+                    <span class="result">
+                        <span class="title">
+                            <h1></h1>
+                        </span> <br>
+                        <span class="description">
+                
+                        </span>
+                    </span>
+                </div>
+                <input type="button" value="Entrer" class="button-submit">
+            </form>
+        </div>
+    </header>
+    
+    <a href="#scroll-bottom" class="scroll-bottom">^</a>
+    <a href="#scroll-top" class="scroll-top">^</a>
+   
+    <main>
+        <div class="listAlbumsMusics" id="scroll-bottom">
+            <!-- Texte généré automatiquement selon les données du fichier musiques.json -->
+        </div>
+    </main>
+    <footer>
+        <div class="realised-by">
+            <p>©2025 TE Jimmy. Tous droits réservés.</br>Réalisé par Jimmy TE</p>
+        </div>
+        <div class="credits">
+            <h2>Crédits</h2>
+            <div class="credits-elements">
+                <a href="https://pixabay.com/fr/vectors/disque-laudio-vinyle-record-32390/" target="_blank">Pixabay</a>
+                <a href="https://boxicons.com/" target="_blank">Boxicons</a>
+                <a href="https://open.spotify.com/intl-fr">Spotify</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/functions.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+[
+    {
+        "artiste": "keshi",
+        "nomMusique": "Soft Spot",
+        "explication": "J'ai choisi cette musique car elle m'a profondément marqué dès la première écoute. La douceur de la voix de keshi est puissante, ce qui met parfaitement en valeur son style musical, entre R&B et lo-fi. La puissance de keshi de pouvoir aller dans les aigus crée une atmosphère à la fois apaisante et mélancolique, dans laquelle il est facile de se plonger. </br></br> Ce morceau est représentatif du talent de keshi, un artiste principalement connu pour sa capacité à transmettre des émotions sincères à travers sa musique. C'est cette capacité à mêler la simplicité et l'intensité de keshi qui rend cette chanson si marquante.",
+        "albumOrMusic":"albumOrMusic-1",
+        "DivNameBG":"image-album-keshi",
+        "ImageURL":"images/AlbumsMusics/gabriel-album-keshi.jpg",
+        "audioURL": "./sons/keshi - Soft Spot (Official Music Video).mp3",
+        "link": "https://open.spotify.com/intl-fr/track/5pmITEphUtjpCLmKiYIPl9?si=b5c601bed20647ae",
+        "droitsReserves": "© 2024 Island Records, a division of UMG Recordings, Inc."
+    },
+    {
+        "artiste": "Porter Robinson",
+        "nomMusique": "Cheerleader",
+        "explication": "Lorsque j'écoute cette musique, elle me donne instantanément l'envie de bouger. Elle illustre parfaitement l'esprit joyeux et énergique de cet artiste, qui parvient à transmettre une énergie positive à travers ses musiques. </br></br> Cette musique apporte une ambiance unique, que ce soit lors d'une soirée entre amis ou simplement pour se donner un coup de boost dans la journée pour travailler.",
+        "albumOrMusic":"albumOrMusic-2",
+        "DivNameBG":"image-album-PorterRobinson",
+        "ImageURL":"images/AlbumsMusics/smile-album-porter_robinson.jpg",
+        "audioURL": "./sons/Porter Robinson - Cheerleader (Official Music Video).mp3",
+        "link": "https://soundcloud.com/porter-robinson/cheerleader",
+        "droitsReserves": "© 2024 Sample Sized, LLC Under Exclusive License to Mom+Pop"
+    },
+    {
+        "artiste": "Stray Kids",
+        "nomMusique": "Chk Chk Boom",
+        "explication": "Cette musique, venant de mon groupe de kpop préféré, est une musique entraînante et rythmée. Les différents membres du groupe possèdent différentes voix qui matchent ensemble, et leur diversité des voix font un ensemble harmonieux qui rend cette musique particulièrement addictive pour moi. </br></br> De plus, le M/V de Chk Chk Boom fait intervenir Ryan Raynolds, jouant dans le dernier film sorti récemment : Deadpool & Wolverine, un film Marvel que j'aime. Et je trouve cette caméo incroyable, car de plus, Stray Kids a également fait une bande son pour le film Deadpool & Wolverine.",
+        "albumOrMusic":"albumOrMusic-3", 
+        "DivNameBG":"image-musique-StrayKids",
+        "ImageURL":"images/AlbumsMusics/chk-chk-boom-stray_kids.jpg",
+        "audioURL": "./sons/Stray Kids - Chk Chk Boom MV.mp3",
+        "link": "https://open.spotify.com/intl-fr/track/04vneFKe8iMdaA4d2zxgjb",
+        "droitsReserves": "© 2024 JYP Entertainment"
+
+    },
+    {
+        "artiste": "Felix (Membre de Stray Kids)",
+        "nomMusique": "Unfair",
+        "explication": "Cette chanson réalisée par mon meilleur membre du groupe Stray Kids, a récemment sortie cette musique particulèrement profonde, qui parle des douleurs, des frustrations et d'une recherche de réconfort lorsqu'il ne se sentait pas bien émotionnellement. Les paroles parlent de l'injustice de la vie, de la solitude et du sentiment d'être incompris par les autres. </br></br> Ce qui me marque dans cette musique, qui fait partie maintenant d'une de mes musiques préférées, est que Félix arrive à transmettre avec une voix puissante toute la souffrance qu'il lui tenait à coeur depuis tout ce temps. C'est une chanson qui résonne constamment dans ma tête après chaque écoute et qui est particulièrement profonde.",
+        "albumOrMusic":"albumOrMusic-4",
+        "DivNameBG":"image-musique-felix",
+        "ImageURL":"images/AlbumsMusics/unfair-felix.webp",
+        "audioURL": "./sons/Unfair(Felix).mp3",
+        "link": "https://www.youtube.com/watch?v=PkLLjrGHmhE&ab_channel=StrayKids-Topic",
+        "droitsReserves": "© 2024 JYP Entertainment"
+
+    },
+    {
+        "artiste": "John Michael Howell",
+        "nomMusique": "Had Me At Goodbye",
+        "explication": "Cette musique m'a profondément marqué par l'émotion qui s'en dégage de ses paroles et de la mélodie de sa musique. John Michael Howell est un jeune artiste, qui n'est pas très connu, et pourtant il est très talentueux. </br></br> La voix douce et expressive de John Michael Howell réussit à nous marquer dans cette chanson, il arrive à retranscrire parfaitement les sentiments de perte et de mélancolie. Ce morceau se distingue donc par son ambiance apaisante, avec une mélodie qui reste en tête et qui nous touche en plein cœur.",
+        "albumOrMusic":"albumOrMusic-5",
+        "DivNameBG":"image-musique-JohnMichaelHowell",
+        "ImageURL":"images/AlbumsMusics/had-me-at-goodbye-john_michael_howell.jpg",
+        "audioURL": "./sons/John Michael Howell - Had Me At Goodbye [OFFICIAL LYRIC VIDEO].mp3",
+        "link": "https://www.youtube.com/watch?v=gb9EujBCLv4&ab_channel=JohnMichaelHowell",
+        "droitsReserves": "© 2024 John Michael Howell"
+
+    }
+]

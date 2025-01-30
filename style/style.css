@@ -1,0 +1,895 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --main-color: linear-gradient(#dcb2b2, #9096d7, #9198e5);
+    --h1-police: "Oswald", sans-serif;
+    --default-police: "Faculty Glyphic", sans-serif;
+
+}
+
+/* SCROLLBAR DE LA PAGE MODIFIEE */
+::-webkit-scrollbar {
+    width: 12px;  
+    height: 12px;
+}
+
+    /* Fond de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #444;  
+}
+
+    /* Bouton de la scrollbar (la partie qui se déplace) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#dcb2b2, #9096d7, #9198e5);  
+    border-radius: 10px; 
+    transition: background-color 0.3s ease;
+}
+
+    /* Lorsque l'utilisateur survole la scrollbar */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#dd9e9e, #757bbb, #848de8);  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+
+
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#dcb2b2,#9198e5, #7479b3);
+    height: 300vh;
+    overflow: hidden;
+
+    width: 100vw;
+    z-index: 2; 
+}
+
+header h1.title-page {
+    font-size: 6rem;
+    color: white;
+    font-family: var(--h1-police);
+    position: absolute;
+    top: 0px;
+
+    padding: 25px;
+    background-color: rgba(252, 252, 252, 0.4);
+    border-radius: 6%;
+    z-index: 10;
+}
+
+header h2 {
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    position: absolute;
+    top: 250px;
+    width: 60vw;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+/* POCHETTE VINYL */
+div.pochette-vinyl {
+    width: 20rem;
+    padding: 22rem;
+    background: linear-gradient(#333 90%, #3f3f3f);
+
+    position: fixed;
+    left: -25%;
+    top: 25%;
+    transform: translateY(-25%);
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 3px 8px 10px black;
+}
+
+    /* TITRE DE LA POCHETTE */
+div.pochette-vinyl h1.title-pochette {
+    background-color: none;
+    position: absolute;
+    right: -20px;
+    bottom: 100px;
+    transform: rotate(-90deg);
+    font-family: var(--h1-police);
+    color: white;
+    padding: 20px;
+    background: linear-gradient(#9096d7,#dcb2b2);
+    border-radius: 8px;
+}
+
+
+/* VINYL EN MOUVEMENT */
+div.vinyl {
+    width: 20vw;
+    padding: 20rem;
+    border-radius: 50%;
+    background: linear-gradient(#191919, #2f2f2f);
+    position: fixed;
+    right: -50%;
+    top: 12vh;
+    
+    z-index: 1;
+    animation: rotate infinite 0.8s;
+    filter: brightness(96%);
+
+}
+div.second-layer {
+    width: 15vw;
+    padding: 12rem;
+    border-radius: 50%;
+    background-color: rgb(185, 185, 185);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;  
+}
+div.border-middle-vinyl {
+    width: 10vw;
+    padding: 10rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+div.line-middle-vinyl-1 {
+    width: 8vw;
+    padding: 10rem;
+    border-radius: 50%;
+    border: 20px solid white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    clip-path: ellipse(50% 50% at 50% 100%);
+}
+
+div.line-middle-vinyl-2 {
+    width: 8vw;
+    padding: 10rem;
+    border-radius: 50%;
+    border: 20px solid white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    clip-path: ellipse(50% 50% at 50% 20%);
+}
+
+div.middle-vinyl {
+    position: absolute;
+    width: 10vw;
+    border-radius: 50%;
+    padding: 10rem;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* BUTTON SCROLL TOP + BOTTOM */
+.scroll-bottom, .scroll-top {
+    display: block;
+    margin-top: 80vh;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    padding: 20px 30px;
+    padding-bottom: 10px;
+    background: black;
+    text-decoration: none;
+    z-index: 999;
+    border-bottom-left-radius: 20%; 
+    border-bottom-right-radius: 20%;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3 ease-in-out;
+    color: yellow;
+}
+
+.scroll-bottom:hover, .scroll-top:hover {
+    background-color: rgb(37, 35, 35);
+}
+
+/* BUTTON SCROLL BOTTOM */
+.scroll-bottom {
+    display: block;
+}
+
+/* BUTTON SCROLL TOP */
+.scroll-top {
+    display: none;
+    transform: translateX(-50%);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+/* BUTTON ADD CONTENT */
+button.add-content {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    padding: 3rem;
+    z-index: 100;
+    background-color: #dcb2b2;
+    color: white;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.add-content:hover {
+    background-color: #9198e5;
+}
+
+div.pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 105;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+div.pop-up.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.pop-up.active div.close-pop-up {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+div.pop-up.active div.close-pop-up button {
+    padding: 2rem;
+    background-color: #dcb2b2;
+    color: white;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+div.pop-up.active div.close-pop-up button:hover {
+    background: #9198e5;
+}
+
+form {
+    background-color: rgba(240, 238, 238, 0.8);
+    border-radius: 12px;
+    height: 90vh;
+    width: 50vw;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 3rem;
+    overflow-y: scroll;
+}
+
+form div.add-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+form div.add-infos div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div.add-infos div input {
+    padding: 1rem;
+}
+
+form h1 {
+    font-family: var(--h1-police);
+}
+
+form span[class^='error'] {
+    color: red;
+}
+form span[class^='validate'] {
+    color: green;
+}
+form span.required {
+    color: red;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+a.no-scroll-button {
+    display: none;
+    z-index: -1;
+}
+
+form > input.button-submit {
+    font-family: (var(--h1-police));
+    padding: 1rem 2rem;
+    width: 20vw;
+    margin-left: auto;
+    cursor: pointer;
+
+    background-color: #000;
+    color: white;
+    font-size: 1.2rem;
+}
+
+form > input.button-submit:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.3s all;
+}
+
+    /* APERCU DU VISITEUR  */
+div.AlbumMusic-apercu {
+    height: 90vh;
+    width: 50vw;
+}
+section.presentation-artiste-apercu {
+    height: 40vh;
+    background: linear-gradient(90deg, rgba(197,73,32,1) 0%, rgba(193,44,98,1) 66%, rgba(198,16,16,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+section.albumOrMusic-apercu{
+    display: flex;
+    height: 50vh;
+    background: white;
+    padding: 1.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+section.albumOrMusic-apercu div.image-preview {
+    width: 60%;
+}
+
+section.albumOrMusic-apercu div.infos {
+    width: 40%;
+    word-break: break-all;
+}
+
+section.albumOrMusic-apercu div.title-button {
+    display: flex;
+    gap: 1rem;    
+}
+
+section.albumOrMusic-apercu div.title-button button {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.4rem;
+}
+
+section.albumOrMusic-apercu div.lecteur h2,
+section.albumOrMusic-apercu div.lecteur h3 {
+    font-size: 1rem;
+}
+
+section.albumOrMusic-apercu div.lecteur img {
+    height: 8rem;
+}
+
+
+/* MAIN */
+main {
+    color: black;
+    font-family: "Faculty Glyphic", sans-serif;
+    overflow: hidden;
+    z-index: 11;
+    position: relative;
+    scroll-snap-type: y mandatory;
+    width: 100vw;
+    background-color: #fff;
+}
+
+main h1 {
+    font-size: 3rem;    
+    padding: 1rem 2rem;
+    margin: 10px;
+}
+
+
+div.AlbumMusic {
+    display: flex;
+    flex-direction: column;
+}
+/* STYLE SUR LES SECTIONS PRESENTANT L'ARTISTE */
+    /* TOUS LES IMPAIRS */
+div.AlbumMusic:nth-of-type(odd) section.presentation-artiste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 110vh;
+    background: linear-gradient(90deg, rgba(197,73,32,1) 0%, rgba(193,44,98,1) 66%, rgba(198,16,16,1) 100%);
+    color: white;
+    text-align: center;
+}
+
+    /* TOUS LES PAIRS */
+div.AlbumMusic:nth-of-type(even) section.presentation-artiste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 110vh;
+    background: linear-gradient(90deg, rgba(149,55,243,1) 35%, rgba(0,228,255,1) 100%);
+    color: white;
+}
+/* STYLE SUR LES SECTIONS DES MUSIQUES */
+    /* TOUS LES PAIRS */
+div.listAlbumsMusics div.AlbumMusic:nth-of-type(even) section {
+    margin-right: 5rem;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0;
+    background-color: #fff;
+    position: relative;
+
+}
+
+div.listAlbumsMusics div.AlbumMusic:nth-of-type(even) section div.infos {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: start;
+    width: 80vw;   
+    margin-left: 4rem;
+    word-wrap: break-word;
+}
+
+
+    /* TOUS LES IMPAIRS */
+div.listAlbumsMusics div.AlbumMusic:nth-of-type(odd) section {
+    margin-right: 5rem;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    position: relative;
+}
+
+div.listAlbumsMusics div.AlbumMusic:nth-of-type(odd) section div.infos {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: start;
+    width: 80vw;   
+    margin-right: 4rem;
+    word-wrap: break-word;
+
+}
+
+/* Style des images de chaque album/artiste */
+div.listAlbumsMusics section img {
+    filter: brightness(90%);
+    height: 150vh;
+}
+
+/* LECTEUR DE SON */
+audio {
+    display: none;
+}
+
+button[class$="pause"] {
+    display: none;
+    box-shadow: 1px 1px 5px black, -1px -1px 5px black;
+}
+
+button {
+    border: none;
+    padding: 20px;
+    border-radius: 150%;
+    font-size: 2rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: 0.2s ease-out;
+}
+
+/* SECTION */
+div.infos div.title-button {
+    display: flex;
+    align-items: center;
+}
+
+p.explication {
+    font-size: 1.3rem;
+}
+
+div.lecteur {
+    border-radius: 50px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div.lecteur img.mini-vinyl {
+    height: 15rem;
+}
+
+div.lecteur h2, div.lecteur h3 {
+    margin: 0;
+}
+
+/* LISTE PLATEFORMES */
+
+div.plateforms {
+    margin: 2rem;
+    gap: 20px;
+}
+/* BOXICONS STYLES */
+.bx {
+    font-size: 3em;
+}
+    /* Logo spotify */
+#logo-spotify {
+    transition: color 0.3s ease;
+    color: black;
+}
+#logo-spotify:hover {
+    color: #1db954;
+}
+    /* Logo SoundCloud */
+#logo-soundcloud {
+    transition: color 0.3s ease;
+    color: black;
+}
+#logo-soundcloud:hover {
+    transition: color 0.3s ease;
+    color: #FF6E00;
+}
+    /* Logo Youtube */
+#logo-youtube {
+    transition: color 0.3s ease;
+    color: black;
+}
+#logo-youtube:hover {
+    color: #c4302b ;
+}
+
+/* FOOTER */
+footer {
+    position: relative;
+    background-color: rgb(36, 36, 36);
+    height: 35vh;
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .realised-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer > div.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div.credits-elements {
+    display: flex;
+    gap: 3rem;
+    
+}
+footer div.credits-elements a {
+    color: white;
+    text-decoration: underline;
+    transition: all 0.1s ease;
+}
+
+footer div.credits-elements a:hover {
+    color: grey;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    header h1.title-page {
+        font-size: 4rem;
+    }
+    header h2 {
+        font-size: 2rem;
+        top: 30vh;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    div.pochette-vinyl {
+        left: -200%;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 680px) {
+    div.pochette-vinyl {
+        left: -110%;
+    }
+    /* POP UP */
+    form h1 {
+        font-size: 1.5rem;
+    }
+    form input {
+        width: 60vw;
+        height: 20%;
+    }
+    form textarea {
+        width: 60vw;
+    }
+
+    form > input.button-submit {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    div.pop-up {
+        position: fixed;
+        overflow-x: hidden;
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    div.AlbumMusic-apercu {
+        height: 100%;
+        width: 100vw;
+    }
+
+    form {
+        width: 80vw;
+        height: 100vh;
+        overflow-y: scroll;
+        padding-bottom: 5rem;
+    }
+
+    div.apercu {
+        display: none;
+    }
+}
+@media screen and (min-width: 680px) and (max-width: 850px) {
+    div.pochette-vinyl {
+        left: -70%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 850px) {
+    div.vinyl {
+        right: -90%;
+    }
+    footer {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 660px) {
+    div.vinyl {
+        right: -90%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 550px) {
+    div.vinyl {
+        width: 20vw;
+        padding: 10rem;
+        border-radius: 50%;
+        background: linear-gradient(#191919, #2f2f2f);
+        position: fixed;
+        top: 20vh;
+        
+        z-index: 1;
+        animation: rotate infinite 0.8s;
+        filter: brightness(96%);
+
+    }
+    div.second-layer {
+        width: 15vw;
+        padding: 6rem;
+        border-radius: 50%;
+        background-color: rgb(185, 185, 185);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        
+        z-index: 2;
+        
+    }
+    div.border-middle-vinyl {
+        width: 10vw;
+        padding: 5rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 5px solid black;
+        position: absolute;
+        transform: translate(-50%, -50%);
+
+    }
+
+    div.line-middle-vinyl-1 {
+        width: 8vw;
+        padding: 5rem;
+
+        border-radius: 50%;
+        border: 20px solid white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        clip-path: ellipse(50% 50% at 50% 100%);
+    }
+
+    div.line-middle-vinyl-2 {
+        width: 8vw;
+        padding: 5rem;
+
+        border-radius: 50%;
+        border: 20px solid white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        clip-path: ellipse(50% 50% at 50% 20%);
+    }
+
+    div.middle-vinyl {
+        position: absolute;
+        width: 10vw;
+        border-radius: 50%;
+        padding: 5rem;
+        background-color: #fff;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        z-index: 3;
+
+    }
+
+    /* POCHETTE VINYL */
+    div.pochette-vinyl {
+        width: 20rem;
+        padding: 16rem;
+        background: linear-gradient(#333 90%, #3f3f3f);
+
+        position: fixed;
+        top: 25%;
+        transform: translateY(-25%);
+        z-index: 2;
+        border-radius: 20px;
+        box-shadow: 3px 8px 10px black;
+    }
+
+    /* TITRE DE LA POCHETTE */
+    div.pochette-vinyl h1.title-pochette {
+        background-color: none;
+        position: absolute;
+        right: -20px;
+        bottom: 100px;
+        transform: rotate(-90deg);
+        font-family: "Oswald", sans-serif;
+        color: white;
+        padding: 20px;
+        background: linear-gradient(#9096d7,#dcb2b2);
+        border-radius: 8px;
+    }
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    main h1 {
+        font-size: 2rem;
+    }
+    p.explication {
+        font-size: 0.8rem;
+
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 980px) {
+    div.AlbumMusic div[class^='image-album'] {
+        display: none;
+    }
+    div.AlbumMusic div[class^='image-musique'] {
+        display: none;
+    }
+    div.AlbumMusic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.listAlbumsMusics div.AlbumMusic div.infos {
+        width: auto;
+    }
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(odd) section[class^='albumOrMusic'] {
+        width: auto;
+        margin: 0;
+    }
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(even) section[class^='albumOrMusic'] {
+        width: auto;
+        margin: 0;
+    }
+
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(odd) section {
+        margin: 0 auto;
+    }
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(even) section {
+        margin: 0 auto;
+    }
+
+
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(odd) section div.infos {
+        margin: 0 auto;
+        width: 100vw;
+    }
+    div.listAlbumsMusics div.AlbumMusic:nth-of-type(even) section div.infos {
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    button.add-content {
+        position: fixed;
+        bottom: 2rem;
+        right: 1rem;
+        padding: 1.5rem;
+        z-index: 100;
+        background-color: #dcb2b2;
+        color: white;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
